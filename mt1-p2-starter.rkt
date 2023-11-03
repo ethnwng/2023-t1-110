@@ -1,0 +1,65 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname mt1-p2-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;; DO NOT PUT ANYTHING PERSONALLY IDENTIFYING BEYOND YOUR CWL IN THIS FILE.
+
+(require spd/tags)
+
+(@assignment exams/2023w1-mt1/mt1-p2)
+
+(@cwl ethnwng)   ;fill in your CWL here (same as for problem sets)
+
+(@problem 1) ;do not edit or delete this line
+(@problem 2) ;do not edit or delete this line
+
+;; Given the following definitions:
+
+(define A 5)
+(define B 10)
+
+(define (foo x y)
+  (bar (* A x y B)
+       (+ x y x)))
+
+(define (bar a b)
+  (if (< a b)
+      a
+      b))
+
+;;
+;; Show the step by step evaluation of the following expression.
+;; Leave the expression below as the first step, after it write
+;; the step that follows it and so on.
+;;
+;; None of your steps should be commented out. Put another way, 
+;; do not use any comments of any kind below.  
+;;
+;; NOTE: This question is entirely autograded, your file must run
+;; without errors. Submitting a file that has errors when it runs
+;; will result in a score of 0.
+;;
+
+(foo 4 (+ 2 3))
+(foo 4 5)
+
+(bar (* A 4 5 B)
+     (+ 4 5 4))
+
+(bar (* 5 4 5 B)
+     (+ 4 5 4))
+
+(bar (* 5 4 5 10)
+     (+ 4 5 4))
+
+(bar 1000 (+ 4 5 4))
+(bar 1000 13)
+
+(if (< 1000 13)
+    1000
+    13)
+
+(if false
+    1000
+    13)
+13
+
